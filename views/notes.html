@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get-started-iNote</title>
+    <link rel="stylesheet" href="../static/utilities.css">
+    <link rel="stylesheet" href="../static/notes.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav">
+            <h1 class="h-primary">iNote</h1>
+            <ul id="items">
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="/">About us</a></li>
+                <li class="item"><a href="/">Contact us</a></li>
+                <li class="item"><a href="/">Suggest us</a></li>
+            </ul>
+        </div>
+        <div id="buttons">
+            <button type="button" class="btn" id="logout">Log out</button>
+        </div>
+    </nav>
+
+    <div class="message" id="message">
+        <p class="text" id="message-text"></p>
+        <p class="message-close" id="message-close">&times;</p>
+    </div>
+
+    <section id="main">
+        <div class="add-note" id="add-note">
+            <h1 class="h-primary">Add notes</h1>
+            <div class="add-btn-note">
+                <button class="btn btn-custom" id="add-typed-note">Add typed notes</button>
+                <button class="btn btn-custom" id="add-written-note">Add written notes</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="see-note" id="see-note">
+            <h1 class="h-primary">See your notes</h1>
+            <div id="see-note-top">
+                <div id="see-note-top-inside-search">
+                    <input type="text" class="input" id="search-input" placeholder="Search your note by its title, content or date">
+                    <button type="button" class="btn">Search</button>
+                </div>
+                <div id="see-note-top-inside-switch-starred">
+                    <label class="switch">
+                        <input type="checkbox" id="switch-starred">
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="text">Only starred</p>
+                </div>
+            </div>
+
+            <div class="saved-notes" id="saved-notes">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- The typed Modal -->
+    <div id="myTypedModal" class="modal" style="display: none;">
+        <!-- typed Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <h1 class="h-secondary">Add typed note</h1>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <form action="#" id="typed-form">
+                <div class="modal-body">
+                    <label for="typed-title">Title</label>
+                    <input type="text" name="typed-title" id="typed-title" placeholder="write title here" required>
+                    <label for="typed-content">Content</label>
+                    <textarea name="typed-content" id="typed-content" cols="30" rows="4"
+                        placeholder="write content here" required></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" name="typed-starred" id="typed-starred">
+                        <label for="typed-starred" class="checkbox-label">Mark as starred</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-foot">
+                    <div class="modal-foot-right">
+                        <button type="submit" class="btn modal-btn" id="add-typed-note-btn">Add note</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- The written Modal -->
+    <div id="myWrittenModal" class="modal" style="display: none;">
+        <!-- written Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <h1 class="h-secondary">Add hand written note</h1>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <div class="modal-body">
+
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <div class="modal-foot-right">
+                    <button type="submit" class="btn modal-btn" id="add-written-note-btn">Add note</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- The edit Modal -->
+    <div id="myEditModal" class="modal" style="display: none;">
+        <!-- edit Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <h1 class="h-secondary">Update typed note</h1>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <form action="#" id="edit-typed-form">
+                <div class="modal-body">
+                    <label for="edit-typed-title">Title</label>
+                    <input type="text" name="edit-typed-title" id="edit-typed-title" placeholder="write title here"
+                        required>
+                    <label for="edit-typed-content">Content</label>
+                    <textarea name="edit-typed-content" id="edit-typed-content" cols="30" rows="4"
+                        placeholder="write content here" required></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" name="edit-typed-starred" id="edit-typed-starred">
+                        <label for="edit-typed-starred" class="checkbox-label">Mark as starred</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-foot">
+                    <div class="modal-foot-right">
+                        <button type="submit" class="btn modal-btn" id="edit-typed-note-btn">Update note</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <footer id="footer">
+        <div id="foot">
+            <div id="foot-left">
+                <p class="foot-text">© 2021-till now | iNoteCompany Inc. pvt. ltd. | All rights reserved - <a
+                        href="#">Terms & conditions</a> - <a href="#">Contact us</a> - <a href="#">About us</a> - <a
+                        href="#">Our sponsors</a></p>
+                <p class="foot-text"><a href="#">Facebook</a> . <a href="#">Linkedin</a> . <a href="#">Instagram</a>
+                    .
+                    <a href="#">Twitter
+                </p>
+            </div>
+            <div id="foot-right">
+                <p class="foot-text"><a href="#">Back to top</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../static/notes.js"></script>
+
+</html>

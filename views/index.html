@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-iNote</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/utilities.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav">
+            <h1 class="h-primary">iNote</h1>
+            <ul id="items">
+                <li class="item"><a href="/">Home</a></li>
+                <li class="item"><a href="/">About us</a></li>
+                <li class="item"><a href="/">Contact us</a></li>
+                <li class="item"><a href="/">Suggest us</a></li>
+            </ul>
+        </div>
+        <div id="buttons">
+            <button type="button" class="btn" id="login">Log in</button>
+            <button type="button" class="btn" id="signup">Singup</button>
+        </div>
+    </nav>
+
+    <section id="main">
+        <h1 class="h-primary">Keep your notes handy with iNote</h1>
+        <h1 class="h-secondary">Start organizing your notes here</h1>
+        <button type="button" id="getStartedLogin" class="btn btn-custom"> Get
+            started</button>
+    </section>
+
+    <!-- The login Modal -->
+    <div id="myLoginModal" class="modal">
+        <!-- login Modal content -->
+        <div class="modal-content" id='myLoginModalContent'>
+
+            <div class="modal-head">
+                <h1 class="h-secondary">Log in</h1>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <div class="modal-form">
+                <form action="notes.html" method="get">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="login-username" placeholder="Username" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="login-password" placeholder="Password" required>
+                    <p class="error">Password or username is incorrect!</p>
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <div class="modal-foot-left">
+                    <a href="#" id="link-signup">Don't have an account?</a>
+                </div>
+                <div class="modal-foot-right">
+                    <button type="submit" class="btn modal-btn">Log in</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+
+    </div>
+    <!-- The signup Modal -->
+    <div id="mySignupModal" class="modal">
+        <!-- signup Modal content -->
+        <div class="modal-content" id='mySignupModalContent'>
+
+            <div class="modal-head">
+                <h1 class="h-secondary">Sign up</h1>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <div class="modal-form">
+                <form action="notes.html" method="get" name="signupForm" onsubmit="return validateForm()">
+                    <div>
+                        <div>
+                            <label for="first-name">First name</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="First name" required>
+                        </div>
+                        <div>
+                            <label for="last-name">Last name</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+
+                    <label for="mobile-number">Mobile number</label>
+                    <input type="number" name="mobile-number" id="mobile-number" placeholder="Mobile number">
+                    <p class="error">* Mobile should contain more than 4 and less than 15 digits!</p>
+                    <p class="error">* Mobile number should not contain alphabet!</p>
+
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <p class="error">* Username should contain at least 4 characters!</p>
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <p class="error">* Password should contain at least 6 characters!</p>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+                    <p class="error">* This password should match to the previous password!</p>
+
+            </div>
+            <hr>
+            <div class="modal-foot">
+                <div class="modal-foot-left">
+                    <a href="#" id="link-login">Already have an account?</a>
+                </div>
+                <div class="modal-foot-right">
+                    <button type="submit" class="btn modal-btn">Sign up</button>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div id="foot">
+            <div id="foot-left">
+                <p class="foot-text">© 2021-till now | iNoteCompany Inc. pvt. ltd. | All rights reserved - <a
+                        href="#">Terms & conditions</a> - <a href="#">Contact us</a> - <a href="#">About us</a> - <a
+                        href="#">Our sponsors</a></p>
+                <p class="foot-text"><a href="#">Facebook</a> . <a href="#">Linkedin</a> . <a href="#">Instagram</a>
+                    .
+                    <a href="#">Twitter
+                </p>
+            </div>
+            <div id="foot-right">
+                <p class="foot-text"><a href="#">Back to top</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="../static/index.js"></script>
+
+</html>

@@ -1,0 +1,245 @@
+/*removing webkits*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+
+/* variables */
+:root{
+    --nav-foot-bg:rgb(39, 39, 39);
+--nav-color:whitesmoke;
+--btn-color:rgb(27, 177, 236);
+--link-color:rgb(27, 124, 236);
+--main-color:rgb(58, 57, 57);
+--input-bg:rgba(255, 255, 255, 0.7);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* navbar */
+#navbar{
+    opacity: 0.8;
+    padding: 20px 0px;
+    display: flex;
+    background-color: var(--nav-foot-bg);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+#navbar div.nav{
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+#navbar div.nav h1.h-primary{
+    color: var(--nav-color);
+}
+#navbar div.nav ul#items{
+    display: flex;
+    padding: 0px 30px;
+}
+#navbar div.nav ul#items li.item{
+    list-style: none;
+}
+#navbar div.nav ul#items li.item a{
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: var(--nav-color);
+    padding: 0px 15px;
+}
+#navbar div.nav ul#items li.item a:hover{
+    text-decoration: unset;
+    color:rgb(119, 117, 117);
+}
+#navbar div#buttons{
+    margin-right: 1.5rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* section-main */
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main::before{
+    content: "";
+    background: url('../static/bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.6;
+}
+#main h1.h-primary{
+    color: var(--main-color);
+    padding: 10px 5px;
+    font-size: 3rem;
+}
+#main h1.h-secondary{
+    color: var(--main-color);
+    padding: 10px 5px;
+    font-size: 1.5rem;
+}
+#main button.btn-custom{
+    margin: 10px 5px;
+    padding: 30px 60px;
+    font-size: 1.5rem;
+    background-color: var(--btn-color);
+    color: var(--nav-color);
+    transition: all 0.5s ease-in-out 0s;    
+}
+#main button.btn-custom:hover{
+    transform: scale(1.1);  
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* footer-section */
+#footer{
+    background-color: var(--nav-foot-bg);
+    opacity: 0.8;
+    position: fixed; 
+     bottom: 0;
+    width:100vw;
+}
+div#foot{
+    font-size: 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+}
+div#foot a{
+    color: var(--link-color);
+text-decoration: none;
+}
+div#foot a:hover{
+color: var(--btn-color);
+text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* modal */
+/* The Modal (background) */
+.modal {
+    display: none;/* Hidden by default*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.3); /* Black w/ opacity */
+    transition: all 1s ease-in-out 0s;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 7px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* ------------------------------------------------------------------------------------------------------------------ */
+  /*modal head*/
+div.modal-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+  /*modal form*/
+
+  div.modal-form form{
+      display: flex;
+      flex-direction: column;
+  }
+  div.modal-form form div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 99%;
+  }
+  div.modal-form form div input{
+      margin: 0px 10px ;
+  }
+  div.modal-form form div div{
+      display: flex;
+      flex-direction: column;
+  }
+  div.modal-form form label{
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--nav-foot-bg);
+    margin: 0.1rem 0.1rem;
+    margin-top: 0.7rem;
+  }
+  div.modal-form form input{
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--nav-foot-bg);
+    padding: 0.3rem;
+    border: none;
+    border-bottom: 1px solid var(--nav-foot-bg);
+    outline: none;
+  }
+  /* -------------------------------------------------------------------------------------------------------------- */
+  /*modal foot*/
+  div.modal-foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  div.modal-foot-left a{
+      font-size: 1rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  div.modal-foot-left a:hover{
+    color: var(--btn-color);
+    text-decoration: underline;
+  }
+
+
+
